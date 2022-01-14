@@ -1,5 +1,4 @@
 ﻿using SQLProjekt.VievModel;
-using SQLProjekt.Vievs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,22 +14,22 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SQLProjekt
+namespace SQLProjekt.Vievs
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainMenu : UserControl
     {
-        public MainWindow()
+        public MainMenu()
         {
             InitializeComponent();
             this.DataContext = new MainMenuViev();
         }
 
-        public void Button_Click(object sender, RoutedEventArgs e)
+        private void ShowTable(object sender, RoutedEventArgs e)
         {
-            Test.Content = new MainMenu();
+            ((MainWindow)Application.Current.MainWindow).Test.Content = new TestOkno();
         }
     }
 }

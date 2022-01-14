@@ -6,8 +6,10 @@
         xmlns:local="clr-namespace:SQLProjekt"
         xmlns:uc="clr-namespace:SQLProjekt.Vievs"
         mc:Ignorable="d"
+        Height="1000"
         Title="MainWindow" >
-    <Grid>
-        <uc:TestOkno VerticalAlignment="Top" HorizontalAlignment="Left"/>
-    </Grid>
+    <StackPanel Margin="20">
+        <ContentControl Name="Test" Content="{Binding Screen}"></ContentControl>
+        <Button Name="Return" Height="50" Width="100" Click="Button_Click" HorizontalAlignment="Right"/>
+    </StackPanel>
 </Window>
