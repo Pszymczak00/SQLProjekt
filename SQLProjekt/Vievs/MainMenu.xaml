@@ -6,17 +6,17 @@
              xmlns:local="clr-namespace:SQLProjekt.Vievs"
              mc:Ignorable="d" 
               >
-    <Grid Margin="40">
+    <Grid Margin="40 0 40 40">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         
-        <TextBlock Text="Wybór tebeli" FontSize="30" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Margin="0 0 0 10" Text="Wybór tabeli" FontSize="30" HorizontalAlignment="Center"></TextBlock>
         <ItemsControl Grid.Row="1" ItemsSource="{Binding Buttons}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <Button Height="50" Content="{Binding}" Margin="5" Click="ShowTable"/>
+                    <Button Height="30" Content="{Binding}" Margin="5" Click="ShowTable"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

@@ -1,5 +1,4 @@
 ﻿using SQLProjekt.VievModel;
-using SQLProjekt.Vievs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +14,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SQLProjekt
+namespace SQLProjekt.Vievs
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddRecord.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddRecord : UserControl
     {
-        public MainWindow()
+        public AddRecord()
         {
             InitializeComponent();
-            this.DataContext = new MainMenuViev();
-            Test.Content = new MainMenu();
-            Glowny.Content = new AddRecord();
+            this.DataContext = new AddRecordView();
         }
 
-        public void Button_Click(object sender, RoutedEventArgs e)
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            Test.Content = new MainMenu();
         }
     }
 }

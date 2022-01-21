@@ -10,15 +10,23 @@
         Width="800"
         Title="MainWindow" 
         WindowStartupLocation="CenterScreen">
-    <Grid  Background="GhostWhite">
-        <Grid Margin="20">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-            </Grid.RowDefinitions>
-            <ContentControl  Name="Test"></ContentControl>
-            <Button Margin="5 5 0 5" Grid.Row="1" VerticalAlignment="Bottom" Name="Return" Height="30" Width="100" Click="Button_Click" HorizontalAlignment="Right">Powrot</Button>
-        </Grid>
-    </Grid>
+    <TabControl>
+        <TabItem Header="Przeglądaj">
+            <Grid  Background="GhostWhite">
+                <Grid Margin="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <ContentControl  Name="Test"></ContentControl>
+                    <Button Margin="5 5 0 5" Grid.Row="1" VerticalAlignment="Bottom" Name="Return" Height="30" Width="100" Click="Button_Click" HorizontalAlignment="Right">Powrot</Button>
+                </Grid>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Modyfikuj">
+            <ContentControl  Name="Glowny"></ContentControl>
+        </TabItem>
+    </TabControl>
+
 
 </Window>

@@ -55,10 +55,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="VievModel\AddRecordView.cs" />
     <Compile Include="VievModel\MainMenuViev.cs" />
     <Compile Include="VievModel\TableMenuViev.cs" />
     <Compile Include="VievModel\TestOknoViev.cs" />
     <Compile Include="VievModel\VievModelBase.cs" />
+    <Compile Include="Vievs\AddRecord.xaml.cs">
+      <DependentUpon>AddRecord.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vievs\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
@@ -80,6 +84,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Vievs\AddRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vievs\MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

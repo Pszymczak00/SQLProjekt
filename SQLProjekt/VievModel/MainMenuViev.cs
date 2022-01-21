@@ -17,7 +17,11 @@ namespace SQLProjekt.VievModel
             "Zespoły",
             "Projekty",
             "Sprzęty",
-            "Klienci"
+            "Klienci",
+            "Godziny Pracy",
+            "Zadania",
+            "Miejsca",
+            "Wpisy Pracy"
         };
     }
 }

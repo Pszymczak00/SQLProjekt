@@ -58,6 +58,7 @@ namespace SQLProjekt.VievModel
                 case "Pracownicy":
                     Buttons = new ObservableCollection<string>() { "Zadania", "Wpisy Pracy" };
                     break;
+
             }
 
             if (Buttons is null) return;
