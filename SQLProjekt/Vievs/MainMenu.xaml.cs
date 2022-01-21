@@ -29,7 +29,7 @@ namespace SQLProjekt.Vievs
 
         private void ShowTable(object sender, RoutedEventArgs e)
         {
-            ((MainWindow)Application.Current.MainWindow).Test.Content = new TestOkno();
+            ((MainWindow)Application.Current.MainWindow).Test.Content = new TableMenu(((Button)sender).Content.ToString());
         }
     }
 }

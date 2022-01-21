@@ -10,19 +10,6 @@ namespace SQLProjekt.VievModel
 {
     public class TestOknoViev : ViewModelBase
     {
-        private bool buttonIsEnabled = true;
-        public bool ButtonIsEnabled
-        {
-            get { return buttonIsEnabled; }
-            set
-            {
-                if(buttonIsEnabled != value)
-                {
-                    buttonIsEnabled = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
 
         private DataTable table;
         public DataTable Table {
@@ -39,16 +26,28 @@ namespace SQLProjekt.VievModel
 
         public ObservableCollection<string> Buttons { get; set; } = new ObservableCollection<string>() { "Pracownicy", "Stanowiska", "Zespoły" };
 
-        public ObservableCollection<string> Pracownik { get; set; } = new ObservableCollection<string>(); 
+        public ObservableCollection<string> Pracownik { get; set; } = new ObservableCollection<string>();
 
-        public TestOknoViev()
+
+        private DataTable tableList;
+        public DataTable TableList
+        {
+            get
+            {
+                return tableList;
+            }
+            set
+            {
+                tableList = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public TestOknoViev(int id, string tablica)
         {
             Table = DBConnection.ConnectionFun();
+            TableList = DBConnection.IdGet(id, tablica);
 
-            foreach (DataColumn item in Table.Columns)
-            {
-                Pracownik.Add(item.ColumnName + " : " + item.DefaultValue.ToString());
-            }
         }
     }
 }

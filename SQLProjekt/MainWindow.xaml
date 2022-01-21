@@ -6,10 +6,19 @@
         xmlns:local="clr-namespace:SQLProjekt"
         xmlns:uc="clr-namespace:SQLProjekt.Vievs"
         mc:Ignorable="d"
-        Height="1000"
-        Title="MainWindow" >
-    <StackPanel Margin="20">
-        <ContentControl Name="Test" Content="{Binding Screen}"></ContentControl>
-        <Button Name="Return" Height="50" Width="100" Click="Button_Click" HorizontalAlignment="Right"/>
-    </StackPanel>
+        Height="650"
+        Width="800"
+        Title="MainWindow" 
+        WindowStartupLocation="CenterScreen">
+    <Grid  Background="GhostWhite">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <ContentControl  Name="Test"></ContentControl>
+            <Button Margin="5 5 0 5" Grid.Row="1" VerticalAlignment="Bottom" Name="Return" Height="30" Width="100" Click="Button_Click" HorizontalAlignment="Right">Powrot</Button>
+        </Grid>
+    </Grid>
+
 </Window>

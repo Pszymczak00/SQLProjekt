@@ -55,23 +55,19 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DBConnection.cs" />
-    <Compile Include="Details.xaml.cs">
-      <DependentUpon>Details.xaml</DependentUpon>
-    </Compile>
     <Compile Include="VievModel\MainMenuViev.cs" />
-    <Compile Include="VievModel\MainWindowView.cs" />
+    <Compile Include="VievModel\TableMenuViev.cs" />
     <Compile Include="VievModel\TestOknoViev.cs" />
     <Compile Include="VievModel\VievModelBase.cs" />
     <Compile Include="Vievs\MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vievs\TableMenu.xaml.cs">
+      <DependentUpon>TableMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vievs\TestOkno.xaml.cs">
       <DependentUpon>TestOkno.xaml</DependentUpon>
     </Compile>
-    <Page Include="Details.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,6 +81,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Vievs\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vievs\TableMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

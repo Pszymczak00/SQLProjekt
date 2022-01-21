@@ -26,6 +26,7 @@ namespace SQLProjekt
         {
             InitializeComponent();
             this.DataContext = new MainMenuViev();
+            Test.Content = new MainMenu();
         }
 
         public void Button_Click(object sender, RoutedEventArgs e)
