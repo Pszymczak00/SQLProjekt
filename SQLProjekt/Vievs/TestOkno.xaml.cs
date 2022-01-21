@@ -31,21 +31,9 @@ namespace SQLProjekt.Vievs
         {
             string temp = ((Button)sender).Content.ToString();
 
-            switch (temp)
-            {
-                case "Pracownicy":
-                    ((TestOknoViev)this.DataContext).Table = DBConnection.ConnectionFun();
-                    break;
-                case "Stanowiska":
-                    ((TestOknoViev)this.DataContext).Table = DBConnection.ConnectionFun2();
-                    break;
-                case "Zespoły":
-                    ((TestOknoViev)this.DataContext).Table = DBConnection.ConnectionFun3();
-                    break;
-                default:
-                    ((TestOknoViev)this.DataContext).Table = DBConnection.ConnectionFun3();
-                    break;
-            }
+
+            ((TestOknoViev)this.DataContext).Table = DBConnection.IdGetTable(((TestOknoViev)this.DataContext).Id, ((TestOknoViev)this.DataContext).Tablica, temp);
+            
 
             TablicaGrid.UpdateLayout();
         }

@@ -11,6 +11,10 @@ namespace SQLProjekt.VievModel
     public class TestOknoViev : ViewModelBase
     {
 
+        public int Id { get; set; }
+
+        public string Tablica { get; set; }
+
         private DataTable table;
         public DataTable Table {
             get
@@ -24,7 +28,7 @@ namespace SQLProjekt.VievModel
             }
         }
 
-        public ObservableCollection<string> Buttons { get; set; } = new ObservableCollection<string>() { "Pracownicy", "Stanowiska", "Zespoły" };
+        public ObservableCollection<string> Buttons { get; set; } = null;
 
         public ObservableCollection<string> Pracownik { get; set; } = new ObservableCollection<string>();
 
@@ -45,8 +49,20 @@ namespace SQLProjekt.VievModel
 
         public TestOknoViev(int id, string tablica)
         {
-            Table = DBConnection.ConnectionFun();
+            Id = id;
+            Tablica = tablica;
             TableList = DBConnection.IdGet(id, tablica);
+
+            switch(tablica)
+            {
+                case "Pracownicy":
+                    Buttons = new ObservableCollection<string>() { "Zadania", "Wpisy Pracy" };
+                    break;
+            }
+
+            if (Buttons is null) return;
+
+            Table = DBConnection.IdGetTable(id, tablica, Buttons[0]);
 
         }
     }
