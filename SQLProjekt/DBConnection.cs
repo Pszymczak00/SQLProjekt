@@ -50,7 +50,7 @@ namespace SQLProjekt
 
         public static DataTable ConnectionFun()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-48S3MQBQ;Initial Catalog=Firma;User ID=User;Password=Pass1234;Integrated Security=False;"))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("[dbo].[ProcPracownicy]", conn);
@@ -68,7 +68,7 @@ namespace SQLProjekt
 
         public static DataTable ConnectionFun2()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-48S3MQBQ;Initial Catalog=Firma;User ID=User;Password=Pass1234;Integrated Security=False;"))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("[dbo].[ProcPracownicy]", conn);
@@ -87,7 +87,7 @@ namespace SQLProjekt
 
         public static DataTable ConnectionFun3()
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-48S3MQBQ;Initial Catalog=Firma;User ID=User;Password=Pass1234;Integrated Security=False;"))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("[dbo].[ProcPracownicy]", conn);
@@ -105,7 +105,7 @@ namespace SQLProjekt
 
         public static DataTable Basic(string procName)
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-48S3MQBQ;Initial Catalog=Firma;User ID=User;Password=Pass1234;Integrated Security=False;"))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(procName, conn);
