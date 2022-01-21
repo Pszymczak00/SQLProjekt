@@ -52,7 +52,7 @@ namespace SQLProjekt
             using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-48S3MQBQ;Initial Catalog=Firma;User ID=User;Password=Pass1234;Integrated Security=False;"))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("[dbo].[procGetStanowiska]", conn);
+                SqlCommand cmd = new SqlCommand("[dbo].[ProcPracownicy]", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var da = new SqlDataAdapter(cmd))
@@ -71,7 +71,7 @@ namespace SQLProjekt
             using (SqlConnection conn = new SqlConnection("Data Source=LAPTOP-48S3MQBQ;Initial Catalog=Firma;User ID=User;Password=Pass1234;Integrated Security=False;"))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("[dbo].[procGetZespoły]", conn);
+                SqlCommand cmd = new SqlCommand("[dbo].[ProcPracownicy]", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 using (var da = new SqlDataAdapter(cmd))
