@@ -28,6 +28,8 @@ namespace SQLProjekt
             this.DataContext = new MainMenuViev();
             Test.Content = new MainMenu();
             Glowny.Content = new AddRecord();
+            Mod.Content = new UpdateRecord();
+            Del.Content = new DeleteRecord();
         }
 
         public void Button_Click(object sender, RoutedEventArgs e)

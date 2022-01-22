@@ -55,10 +55,13 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Models\ForeignKey.cs" />
     <Compile Include="VievModel\AddRecordView.cs" />
+    <Compile Include="VievModel\DeleteRecordView.cs" />
     <Compile Include="VievModel\MainMenuViev.cs" />
     <Compile Include="VievModel\TableMenuViev.cs" />
     <Compile Include="VievModel\TestOknoViev.cs" />
+    <Compile Include="VievModel\UpdateRecordView.cs" />
     <Compile Include="VievModel\VievModelBase.cs" />
     <Compile Include="Vievs\AddRecord.xaml.cs">
       <DependentUpon>AddRecord.xaml</DependentUpon>
@@ -71,6 +74,12 @@
     </Compile>
     <Compile Include="Vievs\TestOkno.xaml.cs">
       <DependentUpon>TestOkno.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vievs\DeleteRecord.xaml.cs">
+      <DependentUpon>DeleteRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vievs\UpdateRecord.xaml.cs">
+      <DependentUpon>UpdateRecord.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -97,6 +106,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vievs\TestOkno.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vievs\DeleteRecord.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vievs\UpdateRecord.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -20,11 +20,28 @@
                         <TextBlock MinWidth="150" Text="{Binding ColumnName}" />
                         <TextBlock MinWidth="100" Text="{Binding DataType}"/>
                         <TextBox   MinWidth="150" Text="{Binding Paramether}"/>
-                        <CheckBox  Margin="10 0 0 0" MinWidth="30" IsChecked="{Binding Nullable}" IsHitTestVisible="False" Focusable="False"/>
+                        <TextBlock MinWidth="22" Margin="5 0 5 0" TextWrapping="Wrap" Text="{Binding Nullable}" VerticalAlignment="Center"/>
+                        <ComboBox Name="CList" MinWidth="100" ItemsSource="{Binding ForeignKeys}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedForeignKey}">
+                            <ComboBox.Style>
+                                <Style TargetType="{x:Type ComboBox}" >
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Path=Items.Count, ElementName=CList}" Value="0">
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate>
+                                                        <TextBlock Text="{Binding Items[0], ElementName=CList}" />
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ComboBox.Style>
+                        </ComboBox>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-
+        <Button Click="Button_Click" Content="Wyślij" Margin="5 5 0 5" Height="30" Width="100"></Button>
     </StackPanel>
 </UserControl>

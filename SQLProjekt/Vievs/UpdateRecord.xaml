@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="SQLProjekt.Vievs.UpdateRecord"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SQLProjekt.Vievs"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel Margin="20">
+        <TextBlock>Wybierz tablice to modyfikacji :</TextBlock>
+        <ComboBox
+            ItemsSource="{Binding Tables}"
+            SelectedItem="{Binding SelectedTable}"
+            ></ComboBox>
+        <DataGrid Margin="20" Height="300" Name="Tabela" ItemsSource="{Binding Table, Mode=TwoWay, IsAsync=True}"
+ 
+                  IsReadOnly="True"
+                  HorizontalAlignment="Left"
+                  ></DataGrid>
+        <Border BorderBrush="Black" BorderThickness="1">
+            <StackPanel Orientation="Horizontal" Margin="10" HorizontalAlignment="Center">
+                <ComboBox  Name="CList" MinWidth="100" ItemsSource="{Binding Columns}" DisplayMemberPath="ColumnName" SelectedItem="{Binding SelectedColumn}"/>
+                <TextBlock Margin="5 0 0 0" Text="Typ: "/>
+                <TextBlock Margin="0 0 5 0" MinWidth="50" Text="{Binding SelectedColumn.DataType}"/>
+                <TextBlock Margin="5 0 5 0" Text="Nowa wartość: "/>
+                <TextBox   MinWidth="150" Text="{Binding SelectedColumn.Paramether}"/>
+                <TextBlock Margin="5 0 0 0" Text="Id: "/>
+                <TextBox   MinWidth="150" Text="{Binding SelectedColumn.Id}"/>
+            </StackPanel>
+        </Border>
+
+
+        <Button Click="Button_Click" Content="Wyślij" Margin="5 5 0 5" Height="30" Width="100"></Button>
+    </StackPanel>
+</UserControl>

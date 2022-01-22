@@ -24,7 +24,17 @@
             </Grid>
         </TabItem>
         <TabItem Header="Modyfikuj">
-            <ContentControl  Name="Glowny"></ContentControl>
+            <TabControl>
+                <TabItem Header="Dodaj">
+                    <ContentControl  Name="Glowny"></ContentControl>
+                </TabItem>
+                <TabItem Header="Aktualizuj">
+                    <ContentControl  Name="Mod" ></ContentControl>
+                </TabItem>
+                <TabItem Header="Usuń">
+                    <ContentControl  Name="Del" ></ContentControl>
+                </TabItem>
+            </TabControl>
         </TabItem>
     </TabControl>
 

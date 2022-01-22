@@ -17,19 +17,20 @@ using System.Windows.Shapes;
 namespace SQLProjekt.Vievs
 {
     /// <summary>
-    /// Interaction logic for AddRecord.xaml
+    /// Interaction logic for UpdateRecord.xaml
     /// </summary>
-    public partial class AddRecord : UserControl
+    public partial class DeleteRecord : UserControl
     {
-        public AddRecord()
+        public DeleteRecord()
         {
             InitializeComponent();
-            this.DataContext = new AddRecordView();
+            this.DataContext = new DeleteRecordView();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            (DataContext as AddRecordView).InsertData();
+            (DataContext as DeleteRecordView).InsertData();
         }
+
     }
 }
