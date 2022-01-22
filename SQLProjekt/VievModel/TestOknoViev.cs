@@ -56,9 +56,29 @@ namespace SQLProjekt.VievModel
             switch(tablica)
             {
                 case "Pracownicy":
-                    Buttons = new ObservableCollection<string>() { "Zadania", "Wpisy Pracy" };
+                    Buttons = new ObservableCollection<string>() { "Zadania", "Wpisy Pracy", "Sprzęty", "Projekty" };
                     break;
-
+                case "Klienci":
+                    Buttons = new ObservableCollection<string>() { "Projekty"};
+                    break;
+                case "Miejsca":
+                    Buttons = new ObservableCollection<string>() { "Wpisy Pracy" };
+                    break;
+                case "Projekty":
+                    Buttons = new ObservableCollection<string>() { "Zadania", "Pracownicy" };
+                    break;
+                case "Rodzaje Zatrudnienia":
+                    Buttons = new ObservableCollection<string>() { "Pracownicy" };
+                    break;
+                case "Stanowiska":
+                    Buttons = new ObservableCollection<string>() { "Pracownicy" };
+                    break;
+                case "Zadania":
+                    Buttons = new ObservableCollection<string>() { "Wpisy Pracy" };
+                    break;
+                case "Zespoły":
+                    Buttons = new ObservableCollection<string>() { "Pracownicy", "Projekty" };
+                    break;
             }
 
             if (Buttons is null) return;
