@@ -42,7 +42,16 @@ namespace SQLProjekt.Vievs
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            (DataContext as TableMenuViev).TableView.RowFilter = $"[{(DataContext as TableMenuViev).SelectedColumn}] {this.TextFiltr.Text}";
+            try
+            {
+                (DataContext as TableMenuViev).TableView.RowFilter = $"[{(DataContext as TableMenuViev).SelectedColumn}] {this.TextFiltr.Text}";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Błedny format danych do filtrowania");
+                this.TextFiltr.Text = "";
+            }
+            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
