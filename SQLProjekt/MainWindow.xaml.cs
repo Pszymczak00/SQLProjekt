@@ -25,6 +25,7 @@ namespace SQLProjekt
         public MainWindow()
         {
             InitializeComponent();
+            ((MainWindow)Application.Current.MainWindow).Return.Visibility = Visibility.Hidden;
             this.DataContext = new MainMenuViev();
             Test.Content = new MainMenu();
             Glowny.Content = new AddRecord();
@@ -35,6 +36,7 @@ namespace SQLProjekt
         public void Button_Click(object sender, RoutedEventArgs e)
         {
             Test.Content = new MainMenu();
+            ((MainWindow)Application.Current.MainWindow).Return.Visibility = Visibility.Hidden;
         }
     }
 }

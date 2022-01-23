@@ -63,7 +63,6 @@ namespace SQLProjekt.VievModel
             polecenie = $"INSERT INTO {tempTable} VALUES ({polecenie}";
             polecenie = polecenie.Remove(polecenie.Length - 1);
             polecenie = polecenie + ");";
-            MessageBox.Show(polecenie);
             DBConnection.Insert(polecenie);
         }
 

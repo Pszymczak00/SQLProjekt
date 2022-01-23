@@ -30,7 +30,6 @@ namespace SQLProjekt.VievModel
             else tempId = "Id";
 
             polecenie = $"DELETE FROM {tempTable} WHERE {tempId} = {Id};";
-            MessageBox.Show(polecenie);
             DBConnection.Insert(polecenie);
 
             Table = DBConnection.Basic($"[dbo].[ProcDefault{SelectedTable}]");

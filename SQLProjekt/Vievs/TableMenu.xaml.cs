@@ -40,6 +40,14 @@ namespace SQLProjekt.Vievs
             ((MainWindow)Application.Current.MainWindow).Test.Content = new TestOkno((int)(dataTable.Rows[row.GetIndex()]["Id"]), (DataContext as TableMenuViev).TableName);
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            (DataContext as TableMenuViev).TableView.RowFilter = $"[{(DataContext as TableMenuViev).SelectedColumn}] {this.TextFiltr.Text}";
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            (DataContext as TableMenuViev).TableView.RowFilter = "";
+        }
     }
 }

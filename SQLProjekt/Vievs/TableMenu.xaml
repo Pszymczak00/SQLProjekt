@@ -9,7 +9,7 @@
     <StackPanel Margin="20">
         <StackPanel Margin="20">
             <TextBlock Text="{Binding TableName}" FontSize="30" HorizontalAlignment="Center"></TextBlock>
-            <DataGrid ItemsSource="{Binding Table}"
+            <DataGrid ItemsSource="{Binding TableView}"
  
                   IsReadOnly="True"
                   HorizontalAlignment="Left"
@@ -22,6 +22,16 @@
                     </Style>
                 </DataGrid.ItemContainerStyle>
             </DataGrid>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Height="40">
+                <ComboBox
+                    ItemsSource="{Binding Columns}"
+                    SelectedItem="{Binding SelectedColumn}" Margin="5" MinWidth="100"
+                    >  
+                </ComboBox>
+                <TextBox Name="TextFiltr" MinWidth="50" Margin="5" Text="{Binding FiltrText}"> </TextBox>
+                <Button Margin="5" Height="30" Width="100" Click="Button_Click">Filtruj</Button>
+                <Button Margin="5" Height="30" Width="100" Click="Button_Click_1">Restart</Button>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
 </UserControl>

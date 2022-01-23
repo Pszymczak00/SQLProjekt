@@ -62,7 +62,6 @@ namespace SQLProjekt.VievModel
             else tempId = "Id";
 
             polecenie = $"UPDATE {tempTable} SET {SelectedColumn.ColumnName} = {polecenie} WHERE {tempId} = {SelectedColumn.Id};";
-            MessageBox.Show(polecenie);
             DBConnection.Insert(polecenie);
 
             Table = DBConnection.Basic($"[dbo].[ProcDefault{SelectedTable}]");
